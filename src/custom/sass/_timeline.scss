@@ -1,0 +1,79 @@
+.fk-activity-log-parent {
+   .fk-activity-log-timeline-1 {
+      .timeline-item {
+         .item-buble {
+            color: #D9D9D9;
+            font-size: 7px;
+            z-index: 5;
+         }
+
+         .date {
+            color: #A7A7A7;
+         }
+
+         .name {
+            color: #4D4D4D;
+         }
+
+         &::after {
+            position: absolute;
+            left: 3px;
+            width: 1px;
+            top: 9px;
+            bottom: -8px;
+            background-color: #c7c6c3;
+            content: "";
+            display: block;
+         }
+
+         &:last-child {
+            &::after {
+               display: none;
+            }
+         }
+      }
+   }
+   .ps {
+      max-height: 400px;
+
+      .ps__rail-y {
+         right: -12px !important;
+      }
+   }
+}
+
+.mng-eval-complet-timeline{
+   .time-line-item{
+      &::before{
+         position: absolute;
+         width: 1px;
+         display: block;
+         content: "";
+         top: 19px;
+         bottom: -4px;
+         background-color: $success;
+         left: -21px;
+         opacity: 0.6;
+      }
+      &:last-child{
+         &::before{
+            display: none;
+         }
+      }
+      .timeline-bubble{
+         color: $gray-300;
+      }
+   }
+   &.rejected{
+      .time-line-item{
+         &::before{
+            background-color: $gray-400;
+         }
+         &:nth-last-child(2){
+         &::before{
+            background-color: $danger;
+         }
+      }
+   }
+}
+}

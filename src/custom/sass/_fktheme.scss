@@ -1,0 +1,15 @@
+$fk-theme: // "theme name"  bg color, theme text color ,  
+    "sandal" #FAF4F0 #FF9551 #FFF9F5,
+    "light-blue" #03A9F4 #56b4c0 #67a5b8;
+
+@each $i in $fk-theme {
+    .fk-theme--#{nth($i,1)} {
+        &.fk-content-wraper {
+            background-color: nth($i, 2);
+        }
+
+        &.fk-custom-header {
+            background-color: nth($i, 2);
+        }
+    }
+}

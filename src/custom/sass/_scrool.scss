@@ -1,0 +1,282 @@
+
+
+.ps__rail-y {
+  top: 0 !important;
+  border-radius: 10px;
+  overflow: hidden;
+
+}
+
+.ps__thumb-y {
+  min-height: 50px;
+}
+
+.ps__rail-x {
+  display: none !important;
+}
+
+.ps {
+
+  .scrool-container {
+    width: 100%;
+    padding-right: 0;
+    position: relative;
+    // z-index:1;
+
+    &.ps--active-y {
+      margin-right: -12px;
+
+      .scrool-container {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// scroolbar
+.contentarea-one {
+  height: calc(100vh - 220px);
+}
+
+.scrool-user-idea {
+  height: calc(100vh - 220px);
+
+  @include media-breakpoint-down(xl) {
+    height: auto;
+  }
+}
+
+.scrool-i-detail {
+  height: calc(100vh - 160px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.scrool-challenge-list--scrool {
+  height: calc(100vh - 280px);
+
+  @include media-breakpoint-down(xl) {
+    height: calc(100vh - 360px);
+
+  }
+
+  @include media-breakpoint-down(sm) {
+    height: calc(100vh - 260px);
+
+  }
+}
+
+.scrool-theme {
+  height: calc(100vh - 220px);
+
+}
+
+.scrool-theme-detail {
+  height: calc(100vh - 140px);
+
+}
+
+// challenge user
+.scrool-userchallenge-list {
+  height: calc(100vh - 160px);
+
+  @include media-breakpoint-down(xl) {
+    height: calc(100vh - 220px);
+  }
+
+  @include media-breakpoint-down(lg) {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+}
+
+.scrool-userchallenge-list-sidebar {
+  height: calc(100vh - 150px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.scrool-userchallenge-detail {
+  height: calc(100vh - 130px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+.scrool-userchallenge-detail-sidebar {
+  height: calc(100vh - 130px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+    margin-bottom: 20px;
+  }
+}
+
+// project
+.scrool-content-project {
+  height: calc(100vh - 250px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.scrool-sidebar-project {
+  height: calc(100vh - 250px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+
+}
+
+.outer-scrool {
+  &.ps {
+    .ps__rail-y {
+      // right: -20px !important;
+    }
+  }
+}
+
+.ps {
+  .ps__rail-y {
+    // right: -44px !important;
+  }
+}
+
+.sidebar-scrool {
+  &.ps {
+    .ps__rail-y {
+      // right: -30px !important;
+    }
+  }
+}
+
+.scrool-overview-colum {
+  height: calc(100vh - 270px);
+
+  @include media-breakpoint-down(lg) {
+    height: 300px;
+  }
+}
+
+.scrool-overview-sidebar {
+  height: calc(100vh - 120px);
+  // @include media-breakpoint-down(lg) {
+  //   height: auto;
+  // }
+}
+
+// admin Idea 
+
+.scrool-admin-idea {
+  height: calc(100vh - 280px);
+
+  @include media-breakpoint-down(xl) {
+    height: calc(100vh - 295px);
+  }
+}
+
+.scrool-idea-sidebar {
+  height: calc(100vh - 180px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+  }
+}
+
+.scrool-profile {
+  height: calc(100vh - 110px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+  }
+}
+
+.scrool-add-q {
+  height: calc(100vh - 220px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+  }
+}
+
+.scrool-add-user {
+  height: calc(100vh - 180px);
+
+  @include media-breakpoint-down(lg) {
+    height: auto;
+  }
+}
+
+.scrool-my-role {
+  height: calc(100vh - 285px);
+
+  @include media-breakpoint-down(xl) {
+    height: auto;
+  }
+}
+
+// admin.
+.scrool-i-detail-admin {
+  height: calc(100vh - 180px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.scrool-activitlog-admin {
+  height: calc(100vh - 290px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.scrool-post-chalenge {
+  height: calc(100vh - 166px);
+  margin-right: 20px;
+}
+
+.right-bar-fixed {
+  width: 36%;
+}
+
+.scrool-manage-user {
+  height: calc(100vh - 223px);
+  margin-right: 20px;
+}
+
+.scrool-manage-question {
+  height: calc(100vh - 223px);
+}
+
+.scrool-add-project {
+  height: calc(100vh - 270px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+.scrool-project-Detail {
+  height: calc(100vh - 109px);
+
+  @include media-breakpoint-down(md) {
+    height: auto;
+  }
+}
+
+
+// sidebar scrool{
+  .manage-eval-scrool{
+    height:calc(100vh - 100px) ;
+  }

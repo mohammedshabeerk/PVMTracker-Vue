@@ -1,0 +1,91 @@
+$colours: 
+    "pending" #E9ECFF $gray-800 #A567D6,
+    "success" #E1F9F4 $gray-800 #34BFA3,
+    "warning" #FFF4ED $gray-800 #FF9551;
+
+    @each $i in $colours {
+      .fk-challenge-eval--#{nth($i, 1)} {
+          background-color: nth($i, 2) !important;
+          color: nth($i, 3);
+          .status-buble{
+            background-color: nth($i, 4) !important;
+            width: 8px;
+            height: 8px;
+          }
+          i{
+            color: nth($i, 4) !important;
+           
+          }
+      }
+   }
+.fk-user-profile{
+   .profile-bg{
+      background-size: cover;
+      background-position: center;
+      height: 200px;
+      @include media-breakpoint-down(xl) {
+         height: 150px;
+     }
+   }
+}
+.profile-card{
+   box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.15);
+   .text-link{
+      color: $grapefruit;
+      transition-duration: 0.2s;
+   }
+   &:hover{
+      .text-link{
+         color: $white;
+         background-color: $Pumpkin-Orange;
+      }
+   }
+}
+
+     
+$RewardCard: // "name"      BG             ticket            arch
+    "primary" $Lavender-Mist $blue-marguerite rgba($blue-marguerite, 0.7),
+    "danger" $peach-schnapps $Pumpkin-Orange rgba($warning , 0.7),
+    "success" $water-leaf $GreenishCyan rgba($Greenish-Cyan , 0.7);
+
+.CardVoucher {
+    @each $i in $RewardCard {
+        &.voucher-card-item--#{nth($i, 1)} {
+         transition-duration: 0.5s;
+            .card-label {
+                background-color: nth($i, 2);
+
+                .ticket {
+                    svg {
+                     transition-duration: 0.2s;
+                        path {
+                            fill:  nth($i, 3) !important;
+                        }
+                    }
+                }
+                    svg.arc {
+                        path {
+                            fill:  nth($i, 4) !important;
+                        }
+                    }
+            }
+            &:hover{
+               box-shadow: 3px 4px 5px  rgba(nth($i, 3), 0.4)!important;
+               .card-label {
+                  .ticket {
+                     svg {
+                        transform: scale(1.1);
+                     }
+                 }
+               }
+            }
+        }
+    }
+}
+
+.my-profile-card{
+   transition-duration: 0.2s;
+   &:hover{
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.4)
+   }
+}

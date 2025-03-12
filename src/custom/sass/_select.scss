@@ -1,0 +1,203 @@
+// vue select
+// .fk-v-select {
+//   &.v-select {
+//     .vs__dropdown-toggle {
+//       border: 0 !important;
+//       height: calc(1.5em + 1.3rem + 2px);
+//       background-color: transparent;
+
+
+//       .vs__selected-options {
+//         max-width: 100%;
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//         white-space: nowrap;
+//         display: flex;
+//         align-items: center;
+
+//         .vs__selected {
+//           height: 100%;
+//           overflow: hidden;
+//           text-overflow: ellipsis;
+//           white-space: nowrap;
+//         }
+//       }
+
+//       .vs__selected {
+//         overflow: hidden;
+//         text-overflow: ellipsis;
+//         white-space: nowrap;
+//         font-size: $font-size-xs;
+//         font-weight: $font-weight-normal;
+//       }
+
+//       .vs__open-indicator {
+//         fill: rgba($color: $success, $alpha: .5);
+//       }
+//     }
+
+//     .v-select [role="listbox"] {
+//       width: 350px;
+//     }
+
+//   }
+
+//   .vs__dropdown-menu {
+//     padding: 0;
+//     max-width: 1000px;
+//     width: auto;
+//     min-width: 100%;
+//     margin-top: 5px;
+//   }
+// }
+
+// .fk-select-large {
+//   .vs__dropdown-toggle {
+//     background-color: transparent;
+//     border: 0;
+
+//     .vs__selected-options {
+//       min-height: 65px;
+//       align-items: center;
+
+//       .vs__selected {
+//         max-height: 31px;
+//         background-color: $white;
+//         padding: 5px 5px 5px 8px;
+
+//         .vs__deselect {
+//           margin-left: 9px;
+//           margin-right: 3px;
+
+//         }
+//       }
+//     }
+//   }
+
+//   &.single-select {
+
+//     .vs__selected-options {
+//       .vs__selected {
+//         background-color: transparent;
+//       }
+//     }
+//   }
+// }
+
+
+
+
+.fk-vue-select {
+  .vs__dropdown-toggle{
+    border: 0;
+    background: transparent;
+  .vs__selected-options{
+    .vs__search{
+    border: 0;
+    background: transparent;
+     font-size: 12px;
+    }
+ .vs__selected{
+  //  min-height: 19px!important;
+   // padding-top: 5px;
+   font-weight: 500!important;
+ }
+}
+}
+  .vs__dropdown-menu {
+    margin: 0;
+    padding: 10px;
+    max-width: 600px;
+    width: auto;
+    min-width: 100%;
+    box-shadow: none;
+    border: 0;
+    background-color: $white;
+    box-shadow: 0 2px 5px #d0d0d0 !important;
+
+    li {
+      background-color: transparent;
+      padding: 9px 10px;
+
+      &[aria-selected="true"] {
+        color: $dark !important;
+      }
+
+      &:hover {
+        background-color: $white;
+        color: $dark !important;
+      }
+
+      &:visited {
+        background-color: $light;
+        color: $dark;
+      }
+
+      .active {
+        background-color: $white;
+        color: $dark;
+      }
+    }
+  }
+
+
+  &.borderless {
+    .vs__dropdown-menu {
+      background-color: $light;
+      padding: 0;
+    }
+
+    .vs__dropdown-toggle {
+      border: 0;
+      background-color:transparent;
+
+    }
+  }
+
+  .vs__actions {
+    .vs__open-indicator {
+      path {
+        // fill: none;
+      }
+      // border-bottom: 1px solid $dark!important;
+      // border-left: 1px solid $dark;
+      // width: 10px;
+      // transform: rotate(-45deg);
+    }
+  }
+  &.vs--open {
+    .vs__actions {
+      // padding-right: 15px;
+      // padding-bottom: 5px;
+      .vs__open-indicator {
+        // border-bottom: 1px solid $dark!important;
+        // border-left: 1px solid $dark;
+        // width: 10px;
+        // transform: rotate(135deg);
+      }
+    }
+  }
+}
+.fk-sort{
+  .fk-vue-select{
+   min-width: 125px;
+ .vs__selected-options{
+      .vs__search{
+      
+       font-size: 12px;
+      }
+   .vs__selected{
+    //  min-height: 19px!important;
+     // padding-top: 5px;
+     font-weight: 500!important;
+   }
+ }
+ .vs__actions{
+  // padding: 0;
+   .vs__clear{
+     display: none;
+   }
+ }
+
+}
+}

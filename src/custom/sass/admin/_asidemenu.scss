@@ -1,0 +1,47 @@
+
+.fk-aside-admin{
+    width: 240px;
+    @include media-breakpoint-down(lg) {
+      width:auto;
+    }
+     @media (max-width: 1440px) {
+           width: 240px;
+     }
+    .aside-menu{
+      .menu-nav{
+         .menu-item{
+           .menu-link{
+            padding: 15px 25px 15px 37px!important;
+            display: flex;
+            align-items: center;
+              color:$gray-800;
+                 .menu-text{
+                   font-size:1.2rem !important;
+                   @include media-breakpoint-down(xl) {
+                     font-size:.875rem !important;
+                   }
+                   color:$gray-800;
+                    @media (max-width: 1440px) {
+                           font-size:1rem !important;
+                     }
+                 }
+              .menu-icon{
+                  color:$gray-800;
+                }
+                &:hover{
+                    background-color: $page-bg!important;
+                }
+           }
+           &.menu-item-active{
+              color: $primary;
+           }
+           &.menu-item-active{
+              .menu-link{
+                 background-color: $page-bg;
+              }
+           }
+         }
+      }
+    }
+
+}

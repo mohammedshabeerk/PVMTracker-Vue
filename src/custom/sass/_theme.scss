@@ -1,0 +1,64 @@
+$fk-theme-colours: 
+  "warning" #FF9551 $white ,
+  "info" #716ACA $white ,
+  "success" #34BFA3 $white,
+  "primary" #51B6FF $white ,
+  "danger" #FF7777 $white ;
+
+
+@each $i in $fk-theme-colours {
+  .theme-item  {
+   .fk-theme-title--#{nth($i, 1)} {
+        background-color: nth($i, 2);
+        background-repeat: no-repeat;
+        color: nth($i, 3);
+    }
+  }
+}
+
+.fk-theme-wraper {
+  .theme-item {
+    .fk-theme-switch {
+      .custom-control-label {
+        &::before {
+          border: 0;
+        }
+
+        &::after {
+          background: $danger;
+        }
+      }
+
+      .custom-control-input:checked {
+        ~.custom-control-label::before {
+          background-color: $white;
+        }
+
+        ~.custom-control-label::after {
+          background-color: $success;
+        }
+      }
+    }
+  }
+}
+
+
+$theme-profile-images :
+'~@/custom/media/img/theme-profile-bg-1.jpg'
+'~@/custom/media/img/theme-profile-bg-2.jpg'
+'~@/custom/media/img/theme-profile-bg-3.jpg'
+'~@/custom/media/img/theme-profile-bg-4.jpg'
+'~@/custom/media/img/theme-profile-bg-5.jpg';
+
+$alphabets: "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z";
+.theme-profile-image {
+    padding-top: 2px;
+    @for $index from 1 through length($alphabets) {
+        $image-index : $index % length($profile-images) + 1;
+        $alphabet: nth($alphabets, $index);
+        $image: nth($theme-profile-images, $image-index);
+        &.#{$alphabet} {
+            background-image: url($image);
+        }
+    }
+}

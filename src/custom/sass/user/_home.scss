@@ -1,0 +1,21 @@
+
+.fk-carousel-user-overview {
+   .carousel-indicators {
+      margin-bottom: 0;
+      position: static;
+
+      li {
+         width: 11px;
+         height: 11px;
+         border-radius: 50%;
+         margin-top: 5px;
+         border: 0;
+         background-color: $primary-light ;
+
+         &.active {
+            background-color: $primary;
+         }
+      }
+   }
+}
+

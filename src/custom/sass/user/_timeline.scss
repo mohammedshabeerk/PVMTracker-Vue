@@ -1,0 +1,12 @@
+.fk-timeline{
+   .timeline-item:nth-child(odd){
+      .timeline-badge{
+         border-color: $info!important;
+      }
+   }
+   .timeline-item:nth-child(even){
+      .timeline-badge{
+         border-color: $success!important;
+      }
+   }
+}

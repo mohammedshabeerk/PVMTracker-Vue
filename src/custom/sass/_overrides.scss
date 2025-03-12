@@ -1,0 +1,121 @@
+// fix issue of page scrolling to top when opening modals
+body {
+
+    &,
+    &.modal-open {
+        overflow: visible !important;
+        overflow-y: visible !important;
+    }
+}
+
+//fix for place auto complete inside modal
+.pac-container {
+    z-index: 10000 !important;
+}
+
+
+.aside-fixed {
+    .aside {
+        z-index: 9 !important
+    }
+
+    .aside-overlay {
+        z-index: 8;
+    }
+
+    .wrapper {
+        padding-left: 240px;
+
+        @media (max-width: 991px) {
+            padding-left: 0px;
+        }
+    }
+}
+
+$gx-default: 16px;
+$gx-lg: 7px;
+$gutters: "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "auto";
+
+.row {
+    margin-left: -$gx-default;
+    margin-right: -$gx-default;
+
+    @each $i in $gutters {
+        .col-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-xxl-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-xl-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-lg-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-md-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-sm-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+
+        .col-sm-#{nth($i, 1)} {
+            padding-left: $gx-default !important;
+            padding-right: $gx-default !important;
+        }
+    }
+
+    &.gx-7 {
+        margin-left: -$gx-lg;
+        margin-right: -$gx-lg;
+
+        @each $i in $gutters {
+            .col-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-xxl-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-xl-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-lg-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-md-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-sm-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+
+            .col-sm-#{nth($i, 1)} {
+                padding-left: $gx-lg !important;
+                padding-right: $gx-lg !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,97 @@
+$player-bg: #F4F5F8;
+$player-border-color: darken($player-bg, 12%);
+$player-link-color: darken($player-bg, 75%);
+$player-progress-color: $player-link-color;
+$player-text-color: $player-link-color;
+$player-timeline-color: $player-border-color;
+
+.player-wrapper {
+	align-items: center;
+	background-color: $player-bg;
+	// background-image: linear-gradient(90deg, #fff 0, darken(#fff, 12%));
+	display: flex;
+	justify-content: center;
+}
+
+.player {
+	background-color: $player-bg;
+	border-radius: 5px;
+	color: $player-text-color;
+	display: inline-block;
+	line-height: 2.8625;
+	position: relative;
+}
+
+.player-controls {
+	display: flex;
+	
+	> div {
+		
+		&:last-child {
+			border-right: none;
+		}
+		
+		a {
+			color: $white;
+			display: inline-block;
+            background-color:$warning ;
+			line-height: 0;
+			padding: 8px 15px;
+            border-radius: 25px;
+			text-decoration: none;
+			
+			
+		}
+	}
+}
+
+.player-timeline {
+	background-color: $player-timeline-color;
+	height: 100%;
+	min-width: 200px;
+	position: relative;
+	
+	.player-progress,
+	.player-seeker {
+		bottom: 0;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+	}
+	
+	.player-progress {
+		background-color: rgba($warning, $alpha: 0.2);
+		z-index: 1;
+	}
+	
+	.player-seeker {
+		cursor: pointer;
+		width: 100%;
+		z-index: 2;
+	}
+}
+
+.player-time {
+	display: flex;
+	justify-content: space-between;
+
+	.player-time-current {
+		font-weight: 700;
+		padding: 0 5px;
+	}
+	
+
+
+	.player-time-total {
+		// opacity: 0.5;
+		padding: 0 5px;
+	}
+}
+
+.player-volume {
+	display: inline-block;
+	height: 1.1rem;
+	margin: 0 0 0 2px;
+	width: 6rem;
+}

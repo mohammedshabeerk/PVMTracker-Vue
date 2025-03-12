@@ -1,0 +1,36 @@
+.login{
+  background-color: #F5F3EF;
+  .form-area{
+    padding-right: calc((100vw - 1366px) / 2);
+    
+    .colum{
+      .form-control{
+        border-color: #828282!important;
+        &:focus{
+          border-color: #FF9551!important;
+        } 
+      }
+    }
+  }
+  .info{
+    padding-left: calc((100vw - 1366px) / 2);
+    .logo{
+      @include media-breakpoint-down(xxl) {
+        // padding:65px 0 50px ;
+        @include media-breakpoint-down(xl) {
+        }
+      }
+     }
+    .slogan{
+      @include media-breakpoint-down(xxl) {
+      }
+    }
+    @include media-breakpoint-down(xxl) {
+      .vector {
+        // max-width: 100%;
+      }
+    }
+  }
+  
+}
+

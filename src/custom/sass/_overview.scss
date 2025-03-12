@@ -1,0 +1,266 @@
+.fk-user-info {
+  border: 1px solid #CEC3B9;
+
+  .designation {
+    color: rgba($gray-800, $alpha: 0.6)
+  }
+
+  .btn-profile {
+    border: 1px solid #EAE6DD;
+  }
+
+  .fk-user-rating {
+    .border-right {
+      border-right: 1px solid #CEC3B9 !important;
+    }
+
+    .border-left {
+      border-left: 1px solid #CEC3B9 !important;
+    }
+  }
+
+  .fk-btn-voucher {
+    border: 1px solid #716ACA;
+    background-color: transparent;
+    height: 32px;
+
+    &:hover {
+      background-color: #716ACA !important;
+      color: $white !important;
+
+      svg {
+        path {
+          fill: $white !important;
+        }
+      }
+    }
+
+  }
+
+  .fk-activity-tab {
+    .nav-pills {
+      .nav-item {
+        .nav-link {
+          padding: 3px 10px;
+          border-radius: 20px;
+          color: rgba($gray-800, $alpha: 0.6);
+
+          .count {
+            color: $gray-800;
+          }
+
+          &.active {
+            background-color: $gray-800;
+            color: $white;
+
+            .count {
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .fk-activity-item {
+      background-color: #FDFCFA;
+
+      &:hover {
+        background-color: $white;
+      }
+    }
+  }
+
+  .fk-user-description {}
+
+  @include media-breakpoint-down(md) {
+    background-color: $white;
+  }
+}
+
+$ideaCardColors: "warning" #FFF4ED #212121 #FF9551 #FC671A,
+  "primary" #E9ECFF #212121 #A567D6 #A567D6,
+  "cadetgrey" #E9ECFF #212121 #A4940B #A4940B,
+  "danger" #ffe2e5 #212121 #f64e60,
+  "success" #D7F4EF #212121 #34BFA3 #34BFA3;
+
+@each $i in $ideaCardColors {
+  .fk-idea-status--#{nth($i, 1)} {
+    background-color: nth($i, 2) !important;
+    color: nth($i, 3);
+
+    .status-buble {
+      background-color: nth($i, 4) !important;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .fk-department--#{nth($i, 1)} {
+    color: nth($i, 4) !important;
+  }
+
+  .fk-title-icon--#{nth($i, 1)} {
+    color: nth($i, 4) !important;
+  }
+
+}
+
+.create-idea-tab {
+  background-color: rgba($success, $alpha: 1);
+  background-repeat: no-repeat;
+  background-position: 50% top;
+  border-radius: 5px;
+
+  &.card-challenge {
+    background-color: $primary;
+    background-position: 70% top !important;
+  }
+  &:hover{
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+   
+  }
+
+  >div {
+    background-repeat: no-repeat;
+    background-position: right bottom;
+  }
+}
+
+.fk-idea-card {
+  .fk-idea-title {
+    &::after {
+      content: "";
+    }
+  }
+
+  .action-bar {
+    .score {
+      background-color: #FFF4ED;
+    }
+
+  }
+
+}
+
+.btn-votting {
+  .btn {
+    padding: 0;
+    background-color: $white !important;
+    border: 0;
+
+    &:hover {
+      background-color: $white !important;
+    }
+
+    &:focus,
+    &.focus {
+      box-shadow: 0;
+      outline: 0;
+      background-color: $white !important;
+    }
+
+    .icon {
+      width: 19px;
+      height: 19px;
+
+
+      img {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: 0.25s;
+      }
+    }
+
+    .vote {
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    .voted {
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    &.active {
+      .vote {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      .voted {
+        transform: scale(1);
+        opacity: 1;
+      }
+
+      &:focus,
+      &.focus {
+        box-shadow: 0;
+        outline: 0;
+        background-color: $white !important;
+        border: 0;
+      }
+    }
+  }
+}
+
+.fk-idea-sort {
+  .btn {
+    padding: 3px 10px;
+    margin: 0 10px 0 0 !important;
+    border-radius: 20px !important;
+    border: 0 !important;
+    color: rgba($gray-800, $alpha: 0.5);
+
+    &.active,
+    &:focus,
+    &.focus {
+      background-color: $gray-800 !important;
+      color: $white !important;
+    }
+
+    &.btn-secondary {
+      &.focus {
+        background-color: $gray-800 !important;
+        color: $white !important;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    overflow: auto;
+
+    .btn-group-toggle {
+      display: flex;
+      padding-bottom: 10px;
+
+      .btn {
+        white-space: nowrap;
+      }
+    }
+
+  }
+}
+
+.fk-challeng-response {
+  border: 1px solid transparent;
+  transition: ease 0.5s;
+
+  &.warning {
+    &:hover {
+      border: 1px solid $warning;
+    }
+  }
+
+  &.primary {
+    &:hover {
+      border: 1px solid $primary;
+    }
+  }
+
+  &.danger {
+    &:hover {
+      border: 1px solid $grapefruit;
+    }
+  }
+}

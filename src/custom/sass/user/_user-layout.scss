@@ -1,0 +1,15 @@
+.fk-layout-3-colum{
+    .sidebar{
+        min-width: 288px;
+        max-width: 288px;
+        @include media-breakpoint-down(xl) {
+          // max-width: 100%;
+          // min-width: 295px;
+          // max-width: 295px;
+        }
+        @include media-breakpoint-down(lg) {
+          min-width: 295px;
+          max-width: 100%;
+        }
+    }
+}

@@ -1,0 +1,181 @@
+$colours: "red" #f44336 #FFFFFF,
+    "pink" #E91E63 #FFFFFF,
+    "ChinesePink" #E87AA1 #FFFFFF,
+    "purple" #9C27B0 #FFFFFF,
+    "deep-purple" #673AB7 #FFFFFF,
+    "indigo" #3F51B5 #FFFFFF,
+    "blue" #2196F3 #FFFFFF,
+    "light-blue" #03A9F4 #FFFFFF,
+    "cyan" #00BCD4 #FFFFFF,
+    "teal" #009688 #FFFFFF,
+    "green" #4CAF50 #FFFFFF,
+    "light-green" #8BC34A #FFFFFF,
+    "lime" #CDDC39 #303030,
+    "yellow" #FFEB3B #303030,
+    "amber" #FFC107 #FFFFFF,
+    "orange" #FF9800 #FFFFFF,
+    "deep-orange" #FF5722 #FFFFFF,
+    "brown" #795548 #FFFFFF,
+    "grey" #9E9E9E #FFFFFF,
+    "blue-grey" #607D8B #FFFFFF,
+    "light" #F2F4F7 #000000,
+    "sandal" #FFF4ED #212121;
+
+
+
+@each $i in $colours {
+    .fk-color--#{nth($i, 1)} {
+        background-color: nth($i, 2) !important;
+        color: nth($i, 3);
+    }
+
+    .fk-bg--#{nth($i, 1)} {
+        background-color: nth($i, 2) !important;
+        color: nth($i, 3);
+    }
+
+    .fk-text-color--#{nth($i, 1)} {
+        color: nth($i, 2) !important;
+    }
+
+    .fk-department-color--#{nth($i, 1)} {
+        color: nth($i, 2);
+    }
+}
+
+$gray: "gray-100" #ECEDF2,
+    // "gray-800" #6c7380 ,
+    "gray-900" #212121;
+
+@each $i in $gray {
+    .fk-text--#{nth($i, 1)} {
+        color: nth($i, 2);
+    }
+
+    .fk-bg--#{nth($i, 1)} {
+        color: nth($i, 2);
+    }
+}
+
+//color-variations
+.warning-400 {
+    color: $warning-400
+}
+
+.warning-500 {
+    color: $warning-500
+}
+
+//Gray
+.gray-400 {
+    color: $gray-400
+}
+
+.gray-500 {
+    color: $gray-500
+}
+
+.gray-600 {
+    color: $gray-600
+}
+
+.gray-800 {
+    color: $gray-800
+}
+
+// black
+.text-black {
+    color: $black;
+}
+
+// color variables
+$salmon: #FB7171;
+$warning: #FF9551;
+$lime: #CDDC39;
+$teal: #009688;
+$GreenishCyan: #21937C;
+$topaz: #0AB4BF;
+$Cyan-Blue: #0F7CFB;
+$Pinkish-Red: #E87AA1;
+$YellowyBrown: #A4940B;
+$blue-marguerite: #716ACA;
+$blueberry: #4841A0;
+$grapefruit: #E24324;
+$liver: #4D4D4D;
+$danger: #E15757;
+$purple: #A567D6;
+$peach-schnapps: #FDE1D0;
+$mercury: #EAE6DD;
+$Lavender-Mist: #E1E9FF;
+$water-leaf: #B4E7DD;
+$Greenish-Cyan: #34BFA3;
+$Pumpkin-Orange: #FC671A;
+$Cloud: #CEC3B9;
+$OffGreen: #E1F9F4;
+$LightRose: #FFCABF;
+
+
+
+$textcolours: "warning"$warning,
+    "salmon"$salmon,
+    "lime"$lime,
+    "teal"$teal,
+    "GreenishCyan"$GreenishCyan,
+    "topaz"$topaz,
+    "Cyan-Blue"$Cyan-Blue,
+    "Pinkish-Red"$Pinkish-Red,
+    "YellowyBrown"$YellowyBrown,
+    "blue-marguerite"$blue-marguerite,
+    "blueberry"$blueberry,
+    "grapefruit"$grapefruit,
+    "liver"$liver;
+
+@each $i in $textcolours {
+    .fk-text-color--#{nth($i, 1)} {
+        color: nth($i, 2);
+    }
+}
+
+
+$statusbar: "warning" #FFF1E9 $warning $gray-800,
+    "success" #D7F4EF $GreenishCyan $gray-800,
+    "danger" #FFEAEA $danger $gray-800,
+    "secondary" #E9E9E9 $gray-800 $gray-800,
+    "primary" #E9ECFF $purple $gray-800;
+
+
+@each $i in $statusbar {
+    .fk-status--#{nth($i, 1)} {
+        background-color: nth($i, 2);
+        color: nth($i, 4);
+
+        .status-buble {
+            background-color: nth($i, 3);
+            width: 8px;
+            height: 8px;
+        }
+    }
+}
+
+$bgcolours: "warning"$warning,
+    "salmon"$salmon,
+    "lime"$lime,
+    "teal"$teal,
+    "GreenishCyan"$GreenishCyan,
+    "topaz"$topaz,
+    "Cyan-Blue"$Cyan-Blue,
+    "Pinkish-Red"$Pinkish-Red,
+    "YellowyBrown"$YellowyBrown,
+    "blue-marguerite"$blue-marguerite,
+    "peach-schnapps"$peach-schnapps,
+    "white-rock"$peach-schnapps,
+    "mercury"$mercury,
+    "OffGreen"$OffGreen,
+    "liver"$liver;
+
+
+@each $i in $bgcolours {
+    .fk-bg-color--#{nth($i, 1)} {
+        background-color: nth($i, 2);
+    }
+}

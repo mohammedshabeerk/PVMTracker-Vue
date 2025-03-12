@@ -1,0 +1,12 @@
+.height-400-enter-active,
+.height-400-leave-active {
+    transition: all .4s ease;
+    max-height: 400px;
+    overflow: hidden;
+}
+
+.height-400-enter,
+.height-400-leave-to {
+    max-height: 0px;
+    // opacity: 0;
+}

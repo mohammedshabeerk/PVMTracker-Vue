@@ -1,0 +1,24 @@
+$toast: "warning" #FF9551,
+  "primary" #B299FF,
+  "success" #B4E7DD,
+  "dark" #212121;
+
+.fk-toast {
+  width: 320px;
+  .toast-header{
+    padding: 3px;
+    border: 0;
+    align-items: start;
+    .close{
+      opacity: 1;
+    }
+  }
+  .toast-body{
+    display: none!important;
+  }
+  @each $i in $toast {
+    &.fk-toast--#{nth($i, 1)} {
+      border: 1px solid nth($i, 2);
+    }
+  }
+}

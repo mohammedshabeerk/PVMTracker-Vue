@@ -1,0 +1,17 @@
+const Constants = {
+    API_BASE_URL: process.env.VUE_APP_API_BASE_URL,
+    WS_BASE_URL: process.env.VUE_APP_WS_BASE_URL,
+    API_AUTH_URL: process.env.VUE_APP_API_AUTH_URL,
+
+    COGNITO_DOMAIN: process.env.VUE_APP_COGNITO_DOMAIN,
+    COGNITO_CLIENT_ID: process.env.VUE_APP_COGNITO_CLIENT_ID,
+    COGNITO_REDIRECT_URL: process.env.VUE_APP_COGNITO_REDIRECT_URL,
+    
+    COOKIE_DOMAIN:process.env.VUE_APP_AUTH_COOKIE_DOMAIN,
+
+    FEDERATED_AUTHENTICATION:process.env.VUE_APP_FEDERATED_AUTHENTICATION
+
+
+}
+
+export default Constants;

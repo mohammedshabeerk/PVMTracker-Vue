@@ -1,0 +1,25 @@
+.fk-custom-header-admin{
+   padding: 20px 54px!important;
+   background-color: #F5F3EF !important;
+   z-index: 9;
+   @include media-breakpoint-down(lg) {
+      padding:10px 30px 0!important;
+   }
+   &.header-fixed{
+      left:240px!important
+   }
+  
+   .fk-search{
+      border: 1px solid $gray-500;
+   }
+.offcanvas{bottom: auto;
+   .offcanvas-content{
+      height: auto!important;
+   }
+}
+}
+.aside-fixed-admin .aside{z-index: 1;}
+.fk-search{
+   border: 1px solid $gray-500;
+}
+

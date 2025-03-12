@@ -1,0 +1,88 @@
+$ManageEvalStatus: "active-stage" #FF9551 #FFF4ED #000000,
+    "vicited" #34BFA3 #B4E7DD #000000,
+    "disabled" #EAE6DD #EAE6DD rgba($black, 0.4);
+
+.mange-eval-timeline {
+
+    .timeline-item {
+        display: flex;
+        align-items: center;
+
+        @each $i in $ManageEvalStatus {
+            &.timeline--#{nth($i, 1)} {
+                .badge {
+                    background-color: nth($i, 3);
+                    color: nth($i, 4);
+                }
+
+                .timeline-bubble {
+                    font-size: 9px;
+                    color: nth($i, 2);
+                    background-color: $white;
+                }
+            }
+
+            &.timeline--active-stage {
+                .timeline-bubble {
+                    font-size: 14px;
+                }
+            }
+
+            &.timeline--vicited {
+                .badge {
+                    color: rgba(nth($i, 4), 0.4);
+                }
+
+                .evaluation {
+                    &.badge {
+                        color: rgba(nth($i, 4), 1);
+                    }
+                }
+            }
+        }
+
+        &::before {
+            width: 2px;
+            background-color: #EAE6DD;
+            display: block;
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 21px;
+            bottom: -13px;
+        }
+
+        &:last-child {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &.rejected {
+        .timeline-item {
+            &:last-child {
+                .timeline-bubble {
+                    color:   $danger;
+                    background-color: #ffffff;
+                }
+
+            }
+        }
+    }
+}
+
+.eval-completed{
+    &.mange-eval-timeline {
+        .timeline-item {
+            &::before{
+                background-color: #B4E7DD;
+            }
+            &:last-child{
+               .timeline-bubble{
+                 font-size: 14px;
+               }
+            }
+        }
+    }
+}

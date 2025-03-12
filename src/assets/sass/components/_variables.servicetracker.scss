@@ -1,0 +1,60 @@
+//
+// To make future updates easier consider overriding the global variables from _variables.bootstrap.scss and _variables.custom.scss for current demo in this file.
+// Note that this file is included first and variables defined in _variables.bootstrap.scss and _variables.custom.scss
+// are not accessible in this file but you can override any global variable as shown below:
+//
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px // custom breakpoint
+) !default;
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+   xl: 1366px,
+  xxl: 1366px
+) !default;
+
+
+$gray-300: 											#EAE6DD!default;
+$gray-500: 											#CEC3B9!default;
+$gray-600: 											#464E5F !default;
+$gray-800: 											#212121!default;
+// warning
+$warning:                                            #FF9551!default;
+$warning-400:                                       #FF9551!default;
+$warning-500:                                       #E24324!default;
+
+
+// Theme colors
+$page-bg:	 										#ffffff !default;
+// Override primary color variants
+$primary:       									#837BE9!default; // Bootstrap variable
+$primary-hover:    									#9e7fff!default; // Custom variable
+$primary-light:    									#e1e9ff!default; // Custom variable
+$primary-inverse:  									#FFFFFF!default; // Custom variable
+
+$success:       								  	#34BFA3!default; // Bootstrap
+$success-light:    									#E1F9F4!default; // Custom variable
+$success-inverse:  									#FFFFFF!default; // Custom variable
+
+// Warning colors
+$warning:       									#E24324!default; // Bootstrap
+$warning-light:    									#fcb081!default; // Custom variable
+$warning-hover:    									#da6b26!default; // Custom variable
+$warning-inverse:  									#FFFFFF!default; // Custom variable
+
+// Gray colors
+
+$light: 											#F4F5F8 !default;
+
+

@@ -1,0 +1,40 @@
+@import "@/assets/sass/_init";
+
+// user
+
+@import "fkcolors";
+@import "overrides";
+@import "user/home";
+@import "user/idea";
+@import "user/challenge";
+@import "header";
+@import "user/profile";
+@import "theme";
+@import "scrool";
+@import "select";
+@import "checkbox";
+@import "projects";
+@import "modal";
+@import "fktheme";
+@import "common";
+@import "fonts";
+@import "overview";
+@import "user/user-header";
+@import "user/user-layout";
+
+
+// admin
+@import "admin/dashboard";
+@import "admin/header";
+@import "admin/select";
+@import "admin/asidemenu";
+@import "admin/common-admin";
+
+// common
+@import "manage-eval";
+@import "timeline";
+@import "evaluation";
+@import "login";
+@import "toast";
+@import "audio";
+@import "transitions";

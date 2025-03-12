@@ -1,0 +1,118 @@
+.fk-challenges-list {
+  .fk-home-card {
+    &.bg-white {
+      // background-color: rgba($primary-light!important, 0.7);
+      // background-color: $light !important;
+    }
+  }
+
+}
+
+
+// new
+.fk-challenge-comment {
+  .description {
+    font-size: 16px;
+  }
+}
+
+.fk-idea-tab {
+  .nav {
+    &.nav-tabs{
+      border-bottom-width: 2px;
+   
+    .nav-item {
+      margin-bottom: -2px;
+      .nav-link {
+        font-size: 18px;
+        color: $gray-800;
+        margin: 0 25px 0 0;
+        padding: 7px 0;
+        border: 0;
+        @include media-breakpoint-down(md) {
+          margin: 0 15px 0 0;
+        }
+
+        &.active,
+        &:hover {
+          color: $warning;
+          background-color: transparent;
+          border: 0;
+          border-bottom: 2px solid $warning;
+          .count{
+            color: $warning;
+          }
+        }
+
+        &.focus {
+          color: $warning;
+          background-color: transparent;
+          border: 0;
+          margin: 0;
+        }
+        .count{
+          color: #A7A7A7;
+        }
+      }
+    }
+  }
+  }
+}
+
+.fk-challenge-comment {
+  border-top: 1px solid rgba($gray-800, $alpha: 0.2);
+
+  .comment {
+    background-color: #F4F4F3;
+  }
+}
+
+$ideaCardColours: "red" #f44336 #FFFFFF,
+  "pink" #E91E63 #FFFFFF,
+  "ChinesePink" #E87AA1 #FFFFFF,
+  "warning" #FF9551 #FFFFFF;
+
+
+
+.fk-idea-card {
+  @each $i in $ideaCardColours {
+    .fk-cat-color--#{nth($i, 1)} {
+      color: nth($i, 2);
+    }
+    .fk-idea-score-light--#{nth($i, 1)} {
+      color: nth($i, 2);
+    }
+
+  }
+}
+$ideaCardscore-color:
+ "success" #E1F9F4 #34BFA3 $gray-800,
+ "warning" #FFF4ED #FF9551 $gray-800;
+
+  .fk-idea-card {
+    @each $i in $ideaCardscore-color {
+      .fk-idea-score-light--#{nth($i, 1)} {
+        background-color: nth($i, 2);
+        color: nth($i, 4);
+        i{
+          color: nth($i, 3);
+        }
+      }
+    }
+  }
+
+
+  $ideaStatus:
+  "accepted" #E1F9F4 #34BFA3,
+  "denied" #E91E63 #34BFA3;
+ 
+   .fk-idea-card {
+     @each $i in $ideaStatus {
+       &.fk-idea--#{nth($i, 1)} {
+         border: 1px solid nth($i, 3);
+         .fk-idea-status{
+           color: nth($i, 3);
+         }
+       }
+     }
+   }
